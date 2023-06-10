@@ -1,0 +1,106 @@
+*{
+    height: auto;
+}
+.create-new-session-header{
+    margin-top: 20px;
+    width: 90%;
+    height: 80px;
+}
+.create-session-form{
+    height: auto;
+    width: 90%;
+    box-shadow: 
+    2px 2px 1px rgba(51, 5, 236, 0.6),
+    -2px -2px 1px rgba(8, 169, 14, 0.6);
+}
+form>div{
+    color: #fff;
+    padding:15px;
+    height: auto;
+    display: flex;
+    border: 1px solid;
+    flex-wrap: wrap;
+}
+form>div>label {
+    font-size: larger;
+    height: 40px;
+    width: 150px;
+    overflow-y: hidden;
+    padding: 5px;
+}
+form>div>input
+
+/* .exercise_name_cont input, */
+ {
+    background: rgba(51, 5, 236, 0.186);
+    outline: none;
+    font-size: larger;
+    border-radius: 15px;
+    padding: 5px;
+    flex: 1 0 100px;
+    height: 40px;
+}
+ 
+.exercise_input_label label{
+    padding: 5px;
+    font-size: large;
+    height: 100px;
+
+    width: auto;
+}
+
+.session-name{
+    flex: 1 0 250px;
+}   
+.exercise_input_label h4{
+    height: 30%;
+}
+.exercise_input_label input,
+.exercise_input_label h4{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.exercise_input_label>div{
+    height: 90px;
+    padding: 5px 0;
+}
+.exercise_input_label input,
+.exercise_input_label select
+{
+    font-size: large;
+    height: 60%;
+    margin-bottom: auto;
+    box-shadow: 2px 2px rgba(208, 255, 0, 0.447);
+    border-radius: 5px;
+    background: inherit;
+}
+.number-sets,
+.number-reps,
+.number-rest
+{
+    width: 85px;
+}
+
+ 
+
+ 
+/* .exercise_name_cont 
+.exercise_input_label{
+    height: inherit;
+} */
+.add_exercise{
+    height: 50px;
+    width: 50px;
+    background: rgba(208, 255, 0, 0.447);
+    color: #fff;
+}
+.add_exercise:hover {
+    height: 50px;
+    width: 50px;
+    background: rgba(90, 89, 89, 0.801);
+}
+
+
+
+
