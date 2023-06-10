@@ -1,0 +1,191 @@
+
+
+.projects-container{
+    width: 100%;
+    height: 100%;
+    color: black;
+    height: fit-content;
+    background: linear-gradient(45deg, transparent, rgba(165, 165, 165,0.5));
+}
+
+.row{
+    width: 100%;
+    background: linear-gradient(45deg, transparent, rgba(165, 165, 165,0.8));
+    height: fit-content;
+    display: grid;
+
+}
+.row-child{
+    color: black;
+    background: linear-gradient(45deg, transparent, rgba(165, 165, 165,0.8));
+    background: linear-gradient(45deg, transparent, rgba(15, 165, 165,0.5));
+    height: fit-content;
+    width: 100%;
+}
+
+#row-child1{
+    background: linear-gradient(45deg, transparent, rgba(128,128,128, 0.8));
+    box-shadow: 1px 1px 10px 0 rgba(15, 15, 165,0.5);   
+}
+
+ .name {
+    margin-top: 2%;
+    text-shadow: 2px 3px 5px rgba(15, 15, 165,0.5) ;
+    text-align: center;
+    font-size: 160%;
+    font-weight: 700;
+} 
+
+
+.projects{
+    margin-top: 2%;
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+.projects .columns{
+    position: relative;
+    display: inline;
+    width: 30%;
+    margin: 1%;
+    height: 90%;
+    box-shadow: 0.9px 0 5px 0 rgba(15, 15, 165,0.5);
+}
+
+.projects .columns .list1 h3 {
+    margin-top: 5%;
+    text-align: center;
+    padding: 0 5px;
+}
+.projects .columns .list1 h3  .subtitle{
+    font-weight: 100;
+    font-size: small;
+}
+.projects .columns .list1 p{
+    padding: 10px 10px;
+    font-size: large;
+    line-height: 120%;
+    
+}
+
+.projects .columns .list1 .second{
+    margin-bottom: 12%;
+    
+}
+
+
+
+.projects .columns .list2{
+
+}
+.projects .columns .list2 .design{
+    margin: 8%;
+    font-size: large;
+
+}
+
+
+.projects .columns .list2 h2{
+    font-weight:700;
+    margin-top: 5%;
+
+}
+
+.projects .columns .list2 .react-button{
+    margin-bottom: 10%;
+}
+
+.projects .columns .list2 .react-button a{
+    text-decoration: dashed;
+    padding: 10px;
+    margin-bottom: 10%;
+    text-align: center;
+    height: 40%;
+    width:50%;
+    background: rgba(33, 155, 255,0.4);
+    border-radius: 15px;
+    animation: all 5s;
+    animation-delay: -1s;
+    }
+.projects .columns .list2 .react-button a:hover{
+background: rgba(155, 155, 55,0.4);
+box-shadow: -2px 2px 17px rgba(155, 5, 15,0.9);
+height: 50%;
+width: 60%;
+}
+
+
+.projects .columns .list1{
+    
+    text-align: center;
+    display:inline;
+    list-style: none;
+    text-align: left;   
+}
+
+.projects .columns li{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.projects .column3{
+ position: relative;
+    display: inline;
+    width: 30%;
+    margin: 1%;
+    height: 90%;
+    
+    box-shadow: 6px 6px 16px rgba(165, 5, 165,0.6);
+    background: white;
+    animation: animate 6s linear infinite ;
+    animation-delay: -1s;
+
+}
+@keyframes animate
+{
+0%{
+    background: rgba(33, 5, 33,0.4);
+}
+20%{
+    background: rgba(66, 5, 66,0.5);
+}
+40%{
+    background: rgba(99, 5, 99,0.6);
+}
+60%{
+    background: rgba(132, 5, 132,0.7);
+}
+70%{
+    background: rgba(165, 5, 165,0.8);
+}
+100%{
+    background: blueviolet;
+}
+}
+.projects .column3 .list3{
+    display: flex;
+    margin: 2% 0;
+    margin-right: 2%;
+    margin-left: 1%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 98%;
+    width: 99%;
+
+
+}
+
+
+.projects .column3 .list3 ul{
+    display: flex;
+}
+
+.projects .column3 .list3  li{
+    display: inline;   
+    list-style: none;
+    
+}
+
+

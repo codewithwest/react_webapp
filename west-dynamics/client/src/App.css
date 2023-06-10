@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  margin: 2%;
+}
+
+h1 {
+  color: #ffefaa;
+  font-weight: 600;
+  text-align: center;
+  margin: 18px 0;
+}
+
+.container {
+  width: 97%;
+  height: fit-content;
+  
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.tabs button {
+  background-color: lightgray;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  padding: 25px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease-out;
+}
+
+.tabs button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tabs button:disabled {
+  background: linear-gradient(245.39deg, #FC65ED -35.14%, #0500FF 143.06%);
+  color: white;
+}
+
+.title {
+  letter-spacing: 2px;
+  text-align: center;
+  color: black;
+  font-size: medium;
+  margin-bottom: 12px;
+  font-size: 250%;
+  font-weight: 700;
+}
+
+
+
+.content-containter{
+  display: block;
+  align-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.content {
+  width: 100%;
+  border: 3px solid rgba(255, 10, 125, 0.22);
+  height: 120%;
+  padding: 4px;
+  background-color: white;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: justify;
+}
+.inner-content-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.content,
+button {
+  font-size: 15px;
+}
+
+footer{
+  display: flex;
+  
+  text-decoration: none;
+  
+}
+
+footer a {
+  display: flex;
+  right: 0;
+  
+  color: #999999;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 100%) and (max-height:100%)  {
+
+  .container {
+      width: 100%;
+      height: fit-content;
+  }
+
+  .content {
+      padding: 1px;
+  }
+}
