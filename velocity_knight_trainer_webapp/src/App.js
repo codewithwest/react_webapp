@@ -91,8 +91,6 @@ function App() {
           <Link to="/profile" className='main_nav_link d-flex radius-circle center-content'>
             PROFILE
           </Link>
-
-
         </div>
       </nav >
       <Login onChange={handleLoginState}
