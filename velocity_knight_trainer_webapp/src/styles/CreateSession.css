@@ -3,7 +3,7 @@
 }
 :root{
     --primary-bg-color: rgba(240, 249, 241, 0.473);
-     --secondary-bg-color: rgba(19, 167, 216, 0.411);
+     --secondary-bg-color: rgba(19, 167, 216, 0.318);
     --additional-bg-color:rgba(141, 229, 0, 0.251);
     --input-box-shadow:1px 1px 1px rgba(240, 249, 241, 0.573),
         -1px -1px 1px rgba(240, 249, 241, 0.573);
@@ -93,6 +93,10 @@
      border-radius: 10px;
      padding: 5px;
     margin: 10px;
+    /* background: linear-gradient(
+        to bottom right,
+        #403f44,#1e1b32
+    ); */
      background: linear-gradient(10deg,
     rgba(215, 208, 7, 0.351),transparent,
     var(--secondary-bg-color)),
@@ -133,6 +137,7 @@ h4, label{
 .exercise_name_cont {
     flex: 1 0 200px;
 }
+.instructions_cont textarea,
 .exercise_name_cont input,
 .total_rest_cont input,
 .intensity_cont input,
@@ -147,6 +152,9 @@ border: none;
 border-radius: 5px;
 box-shadow: var(--input-box-shadow);
 outline: none;
+}
+.instructions_cont textarea{
+    resize: vertical;
 }
 
 .number_reps_cont,

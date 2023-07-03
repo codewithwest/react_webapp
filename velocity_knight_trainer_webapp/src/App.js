@@ -7,7 +7,8 @@ import { Route, Routes, Link } from "react-router-dom"
 import { CreateSession } from './templates/routes/CreateSession';
 import { AthleteProfile } from './templates/routes/AthleteProfile';
 import { SessionLog } from './templates/routes/SessionLog';
-const Home = lazy(() => import('./templates/Home'))
+import { Home } from './templates/Home';
+// const Home = lazy(() => import('./templates/Home'))
 const Login = lazy(() => import('./templates/auth/Login'))
 const Register = lazy(() => import('./templates/auth/Register'))
 const Profile = lazy(() => import('./templates/Profile'))
@@ -73,45 +74,53 @@ function App() {
   }
 
   return (
-    <div className="main">
-      <button className='login-state b-none  pos-abs'
-        onClick={() => initial_login_state ?
-          display_handler.displayFlex('profile-form-cont') :
-          display_handler.displayFlex('login-form-cont')}>
-        {initial_login_state ? logged_in_icon : logged_out_icon}
-      </button>
-      <nav className='nav-cont center-content fill d-flex'>
-        <div className='nav d-flex text-center   m-auto-hor'>
-          <Link to="/newsession" className='main_nav_link d-flex radius-circle center-content'>
-            CREATE SESSION
-          </Link>
-          <Link to="/sessioncollection" className='main_nav_link radius-circle d-flex center-content'>
-            SESSIONS LOG
-          </Link>
-          <Link to="/profile" className='main_nav_link d-flex radius-circle center-content'>
-            PROFILE
-          </Link>
-        </div>
-      </nav >
-      <Login onChange={handleLoginState}
-      />
-      <Register />
-      <Profile onChange={handleLoginState}
-        value={initial_login_state ? login_data : ""} />
-      <section className='main-cont'>
-        {/* <h1 className='bg-success pos-abs top-0 left-0'>{`${login_state}`}</h1> */}
-
-        <div className='home body-cont'>
-          <Routes>
-            <Route path="/newsession" element={<CreateSession />} />
-            <Route path="/sessioncollection" element={<SessionLog />} />
-            <Route path="/profile" element={<AthleteProfile />} />
-          </Routes>
-        </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/newsession" element={<CreateSession />} />
+      <Route path="/sessioncollection" element={<SessionLog />} />
+      <Route path="/profile" element={<AthleteProfile />} />
+    </Routes>
 
 
-      </section>
-    </div >
+    // <div className="main">
+    //   <button className='login-state b-none  pos-abs'
+    //     onClick={() => initial_login_state ?
+    //       display_handler.displayFlex('profile-form-cont') :
+    //       display_handler.displayFlex('login-form-cont')}>
+    //     {initial_login_state ? logged_in_icon : logged_out_icon}
+    //   </button>
+    //   <nav className='nav-cont center-content fill d-flex'>
+    //     <div className='nav d-flex text-center   m-auto-hor'>
+    //       <Link to="/newsession" className='main_nav_link d-flex radius-circle center-content'>
+    //         CREATE SESSION
+    //       </Link>
+    //       <Link to="/sessioncollection" className='main_nav_link radius-circle d-flex center-content'>
+    //         SESSIONS LOG
+    //       </Link>
+    //       <Link to="/profile" className='main_nav_link d-flex radius-circle center-content'>
+    //         PROFILE
+    //       </Link>
+    //     </div>
+    //   </nav >
+    //   <Login onChange={handleLoginState}
+    //   />
+    //   <Register />
+    //   <Profile onChange={handleLoginState}
+    //     value={initial_login_state ? login_data : ""} />
+    //   <section className='main-cont'>
+    //     {/* <h1 className='bg-success pos-abs top-0 left-0'>{`${login_state}`}</h1> */}
+
+    //     <div className='home body-cont'>
+    //       <Routes>
+    //         <Route path="/newsession" element={<CreateSession />} />
+    //         <Route path="/sessioncollection" element={<SessionLog />} />
+    //         <Route path="/profile" element={<AthleteProfile />} />
+    //       </Routes>
+    //     </div>
+
+
+    //   </section>
+    // </div >
   );
 }
 
