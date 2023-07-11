@@ -150,3 +150,34 @@
 .text-und {
     text-decoration: underline;
 }
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    display: none;
+    background-color: var(--main-text-color);
+    color: var(--main-bg-color);
+    font-size: medium;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 1;
+    top:96%;
+    right: 2px;
+    margin-left: -90px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 15%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-text-color) transparent;
+}
+.popup:hover .popup .popuptext {
+    display: block;
+}

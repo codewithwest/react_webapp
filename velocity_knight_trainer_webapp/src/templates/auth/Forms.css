@@ -43,12 +43,9 @@
 .login-form input:focus {
     background: rgba(53, 54, 54, 0.4);
 }
-
 .login-form input:active {
     background: gray;
 }
-
-
 .login-form button:hover {
     transition: all 1.2s;
     box-shadow: -1.2px -1.2px 2px rgba(28, 28, 28, .7);

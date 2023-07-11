@@ -1,11 +1,16 @@
+:root {
+  --main-text-color:#61dafb;
+  --main-bg-color: #282c34;
+}
+
 .main {
   width: auto;
-  background: #282c34;
+  background: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: 150px auto;
- 
+  color: var(--main-text-color);
 }
 
 .nav {
@@ -21,7 +26,6 @@ padding: 5px;
   height: 100px;
   box-shadow: 1px 1px rgba(166, 197, 8, 0.7),
       -1px -1px rgba(166, 197, 8, 0.7);
-    color: cyan;
   
 }
 
@@ -49,10 +53,6 @@ padding: 5px;
      inset -1.5px -1.5px 3px rgba(8, 36, 197, 0.7);
 }
 
-.main-cont{
-  height: auto;
-  box-shadow: inset 1px 1px rgba(166, 197, 8, 0.7);
-}
 
  
 
