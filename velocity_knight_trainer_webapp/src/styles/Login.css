@@ -59,3 +59,20 @@ form>.form-collapse {
    align-self: flex-end;
     width: fit-content;
 }
+
+@media screen and (max-width:600px) {
+    .login-form-cont{
+        padding: 20px;
+    }
+    form {
+        border-radius: 15px;
+        gap: 10px;
+    }
+        form>h1 {
+            padding: 2px;
+        }
+        form>button {
+            font-size: 20px;
+            margin: 10px;
+        }
+}
