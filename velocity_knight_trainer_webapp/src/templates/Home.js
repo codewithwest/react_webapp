@@ -1,12 +1,15 @@
 import "../styles/Home.css";
 import "../styles/Const.css";
+import "../styles/vkTrainerAnim.css";
+
 import img from "../assets/0.jpg";
 import { Link } from "react-router-dom";
 export function Home() {
-  // return arr
 
   return (
     <div className="home-cont d-flex wrap">
+      
+      {vkTrainerAnimation()}
       {introCards()}
       <div className="welcome d-flex">
         <h2 className="text-center w-100">
@@ -15,6 +18,14 @@ export function Home() {
       </div>
       {whoBox()}
       {floatingBtns()}
+      
+      <h2 className="m-auto our-partners-header">Our Partners</h2>
+      <div className="our-partners d-flex wrap w-100">
+      {ourPartners('name',img)}
+      {ourPartners('name',img)}
+      {ourPartners('name',img)}
+      {ourPartners('name',img)}
+       </div>
     </div>
   );
 
@@ -48,8 +59,8 @@ export function Home() {
   }
   function introCards() {
     return (
-      <div className="intro-cont d-flex wrap j-sa w-100">
-        <div className="left-card d-flexd-flex wrap">
+      <div className="intro-cont d-flex wrap">
+        <div className="left-card flex-col">
           <h3>Efficiency & Convinience</h3>
           <p>
             I know what you thinking? is this for real? Yes it is! with{" "}
@@ -66,7 +77,7 @@ export function Home() {
             <i class="bi bi-arrow-down-right-circle text-info"></i>
           </Link>
         </div>
-        <div className="right-card d-flex wrap center-content">
+        <div className="right-card flex-col">
           <h3>What we offer</h3>
           <p>
             We offer a digital memory book, you add we store, we keep and you
@@ -121,6 +132,26 @@ export function Home() {
           </div>
         </div>
       </div>
+    );
+  }
+    function ourPartners(name, image) {
+    return (
+     
+        <div className="partner-cont flex-col">
+        <img src={image} alt=""className="m-auto" />
+        <h4 className="m-auto">{name}</h4>
+            </div>
+    );
+  }
+   function vkTrainerAnimation(name, image) {
+    return (
+      <div className="vk-trainer-anim d-flex m-auto-hor">
+        <div className="">S</div>
+        <div className="">T</div>
+        <div className="">A</div>
+        <div className="">R</div>
+        <div className="">T</div>
+     </div>
     );
   }
 }

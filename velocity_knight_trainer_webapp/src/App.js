@@ -4,14 +4,8 @@ import { displayHandler } from './functions/ConstFunctions';
 import { logged_in_icon, logged_out_icon } from './functions/ConstIcons';
 import { resolve } from './functions/ConstVars';
 import { Route, Routes, Link } from "react-router-dom"
-import { CreateSession } from './templates/routes/CreateSession';
-import { AthleteProfile } from './templates/routes/AthleteProfile';
-import { SessionLog } from './templates/routes/SessionLog';
-import { Home } from './templates/Home';
-import Register from './templates/auth/Register';
-import Login from './templates/auth/Login';
-import LandingNavBar from './templates/partials/LandingNav';
-import Footer from './templates/partials/Footer';
+import { About, AthleteProfile, CreateSession, Footer, Home, LandingNavBar, Login, Register, SessionLog } from './functions/RoutesProvider';
+
 
 
 const display_handler = new displayHandler()
@@ -86,11 +80,12 @@ function App() {
 
         {/* Nav Via Langing */}
         {/* {document.location.pathname == '/' ? */}
-        {LandingNavBar()}
+        <LandingNavBar />
         {/* : true} */}
         <div className='home body-cont fill'>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/app/about" element={<About />} />
             <Route path="/new/session" element={<CreateSession />} />
             <Route path="/sessions/collection" element={<SessionLog />} />
             <Route path="/athlete/profile" element={<AthleteProfile />} />
@@ -100,7 +95,7 @@ function App() {
             <Route path="/app/auth/user/profile" element={<AthleteProfile />} />
           </Routes>
         </div>
-        {Footer()}
+        <Footer />
       </div>
 
     </>

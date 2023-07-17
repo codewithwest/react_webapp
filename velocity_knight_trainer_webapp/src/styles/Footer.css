@@ -25,6 +25,7 @@
 }
 .footer>div>div>a:hover {
     transition: all .7s;
+    color: var(--main-text-color);
    box-shadow: 3px .3px .3px var(--main-text-color);
    border-radius: 1000px;
 }
@@ -50,15 +51,13 @@
 .footer>div>ul>a {
     text-decoration: none;
     color: inherit;
-    padding: 5px;
+    padding:5px ;
+    border-radius: 100px;
 }
+ 
 .footer>div>ul>a:hover {
-    transition:all .7s;
-    text-decoration: underline;
-}
-.footer>div>ul>a:hover {
-    transition: all .7s;
-    text-decoration: underline;
+    transition: all .3s;
+   box-shadow: 3px 1px .2px var(--main-text-color);
 }
 
 .by-lines{

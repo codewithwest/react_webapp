@@ -6,7 +6,7 @@ import { useState } from "react";
 import { main_logo } from "../../functions/imageProvider";
 
 export default function Footer() {
-                   var arrow = <i class="bi bi-caret-right-fill"></i>
+    var arrow = <i class="bi bi-caret-right-fill"></i>
 
     return (
         <>
@@ -17,40 +17,42 @@ export default function Footer() {
                         Velocity Knight Trainer
                         <i className="bi bi-lightning-fill"></i>
                     </h5>
-                   <div className="d-flex">
+                    <div className="d-flex">
                         <img src={main_logo} alt="" />
                         <small>This tech innovation is property of
                             WestDynamics powered by westdynamics.tech</small>
                     </div>
-                        <small className="w-100">Faster, Further, Higher
-                            <i className="bi bi-lightning-fill"></i>
-                        </small>
-                
+                    <small className="w-100">Faster, Further, Higher
+                        <i className="bi bi-lightning-fill"></i>
+                    </small>
                 </div>
-                <div className="flex-col ">
+                <div className="flex-col">
                     <h5 className="text-center">Get around</h5>
-                            
                     <ul className="flex-col">
-                        <Link to={''}>
-                           {arrow}
+                        <Link to={'/'}>
+                            {arrow}
                             Home</Link>
 
                         <Link to={'/app/about'}>
-                           {arrow}
-                            
+                            {arrow}
                             About</Link>
                         <Link to={'/app/more'}>
-                           {arrow}
-                                More
+                            {arrow}
+                            More
                         </Link>
                         <Link to={'/app/vision'}>
-                           {arrow}
-                                Vision
+                            {arrow}
+                            Vision
                         </Link>
                         <Link to={'/app/feedback'}
 
                         >{arrow}
-                        Feedback
+                            Feedback
+                        </Link>
+                        <Link to={'/app/feedback'}
+
+                        >{arrow}
+                            Contact Us
                         </Link>
                     </ul>
                 </div>
@@ -59,27 +61,27 @@ export default function Footer() {
                     <h6>Socials</h6>
 
                     <div className="d-flex wrap center-content">
-                        <a><i className="bi bi-github"></i></a>
-                        <a><i className="bi bi-linkedin"></i></a>
-                        <a><i className="bi bi-whatsapp"></i></a>
-                        <a><i className="bi bi-twitter"></i></a>
-                        <a><i className="bi bi-slack"></i></a>
-                        <a><i className="bi bi-medium"></i></a>
-                        <a><i className="bi bi-discord"></i></a>
+                        <a href="https://github.com/codewithwest"><i className="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/codewithwest"><i className="bi bi-linkedin"></i></a>
+                        <a href=""><i className="bi bi-whatsapp"></i></a>
+                        <a href=""><i className="bi bi-twitter"></i></a>
+                        <a href=""><i className="bi bi-slack"></i></a>
+                        <a href=""><i className="bi bi-medium"></i></a>
+                        <a href=""><i className="bi bi-discord"></i></a>
                     </div>
                     <h6>Get Platform Apps</h6>
                     <div className="center-content">
-                        <a><i className="bi bi-android"></i></a>
-                        <a><i className="bi bi-apple"></i></a>
-                        <a><i className="bi bi-windows"></i></a>
+                        <Link to={''}><i className="bi bi-android"></i></Link>
+                        <Link to={''}><i className="bi bi-apple"></i></Link>
+                        <Link to={''}><i className="bi bi-windows"></i></Link>
 
                     </div>
                 </div>
             </footer>
             <div className="by-lines d-flex wrap center-content">
                 <p> <a href="https://github.com/codewithwest" className="links">codewithwest <i className="bi bi-github"></i></a></p>
-                <p>&c copyright @WestDynamics Inc, since 2021</p>
-                <p> <a href="https://westdynamics.tech" className="links">powered by westdynamics.tech</a></p>
+                <p>© @WestDynamics Inc, since 2021</p>
+                <p> <a href="https://westdynamics.tech" className="links">powered by © westdynamics.tech 2023 </a></p>
             </div>
         </>
     );
