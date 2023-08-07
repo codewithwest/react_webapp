@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/0.jpg";
-import "../../styles/LandingNav.css";
+import "../../styles/partials/LandingNav.css";
 import "../../App.css";
 import { useState } from "react";
 
 export default function LandingNavBar() {
-  const [curLocal, setcurLocal] = useState(document.location.pathname);
-  const updateIcon = (e) => setcurLocal(document.location.pathname);
+  const [curLocal, setcurLocal] = useState(document.location.pathname !== '/'?1:0);
+  const updateIcon = (e) => setcurLocal(curLocal == 0 ? 1 : 0);
   return (
     <nav className="landing-nav d-flex w-100 j-sb">
       <Link to={"/"} className="logo">
@@ -16,17 +16,17 @@ export default function LandingNavBar() {
 
       <div className="popup">
         <Link
-          to={curLocal == "/" ? "/app/auth/user/login" : "/ "}
+          to={curLocal == 0 ? "/app/auth/user/login" : "/ "}
           className="popup center-content"
         >
-          {curLocal == "/" ?
+          {curLocal == 0 ?
             <>
               <i onClick={updateIcon} className="bi bi-person-fill-lock m-auto"></i>
               <div className="popuptext">Login</div>
             </>
             :
             <>
-              <i className="bi bi-house-fill m-auto"></i>
+              <i onClick={updateIcon} className="bi bi-house-fill m-auto"></i>
               <div className="popuptext">Home</div>
             </>
           }

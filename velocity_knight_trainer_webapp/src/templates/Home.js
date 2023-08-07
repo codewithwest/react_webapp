@@ -5,10 +5,8 @@ import "../styles/vkTrainerAnim.css";
 import img from "../assets/0.jpg";
 import { Link } from "react-router-dom";
 export function Home() {
-
   return (
     <div className="home-cont d-flex wrap">
-      
       {vkTrainerAnimation()}
       {introCards()}
       <div className="welcome d-flex">
@@ -18,14 +16,14 @@ export function Home() {
       </div>
       {whoBox()}
       {floatingBtns()}
-      
+
       <h2 className="m-auto our-partners-header">Our Partners</h2>
       <div className="our-partners d-flex wrap w-100">
-      {ourPartners('name',img)}
-      {ourPartners('name',img)}
-      {ourPartners('name',img)}
-      {ourPartners('name',img)}
-       </div>
+        {ourPartners("name", img)}
+        {ourPartners("name", img)}
+        {ourPartners("name", img)}
+        {ourPartners("name", img)}
+      </div>
     </div>
   );
 
@@ -39,7 +37,7 @@ export function Home() {
             style={{ fontSize: 40 }}
           ></i>
         </Link>
-        <Link to="/app/about" className="d-flex">
+        <Link to="/app/more" className="d-flex">
           <p>Find Out More</p>
 
           <i
@@ -72,7 +70,7 @@ export function Home() {
             <br />
             Let's get Fit, Fast and Stronger Together!
           </p>
-          <Link to="/app/about" className="d-flex center-content">
+          <Link to="/app/more" className="d-flex center-content">
             <p className="m-auto-vert">Find Out More</p>
             <i class="bi bi-arrow-down-right-circle text-info"></i>
           </Link>
@@ -134,16 +132,15 @@ export function Home() {
       </div>
     );
   }
-    function ourPartners(name, image) {
+  function ourPartners(name, image) {
     return (
-     
-        <div className="partner-cont flex-col">
-        <img src={image} alt=""className="m-auto" />
+      <div className="partner-cont flex-col">
+        <img src={image} alt="" className="m-auto" />
         <h4 className="m-auto">{name}</h4>
-            </div>
+      </div>
     );
   }
-   function vkTrainerAnimation(name, image) {
+  function vkTrainerAnimation(name, image) {
     return (
       <div className="vk-trainer-anim d-flex m-auto-hor">
         <div className="">S</div>
@@ -151,7 +148,7 @@ export function Home() {
         <div className="">A</div>
         <div className="">R</div>
         <div className="">T</div>
-     </div>
+      </div>
     );
   }
 }

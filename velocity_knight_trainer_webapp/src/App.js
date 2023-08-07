@@ -5,6 +5,7 @@ import { logged_in_icon, logged_out_icon } from './functions/ConstIcons';
 import { resolve } from './functions/ConstVars';
 import { Route, Routes, Link } from "react-router-dom"
 import { About, AthleteProfile, CreateSession, Footer, Home, LandingNavBar, Login, Register, SessionLog } from './functions/RoutesProvider';
+import More from './templates/info/More';
 
 
 
@@ -86,6 +87,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/app/about" element={<About />} />
+            <Route path="/app/more" element={<More />} />
             <Route path="/new/session" element={<CreateSession />} />
             <Route path="/sessions/collection" element={<SessionLog />} />
             <Route path="/athlete/profile" element={<AthleteProfile />} />

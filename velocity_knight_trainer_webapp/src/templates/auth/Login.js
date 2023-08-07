@@ -1,5 +1,5 @@
 import "../../styles/Const.css";
-import "../../styles/Login.css";
+import "../../styles/auth/Login.css";
 import { useState, useEffect } from "react";
 import { initial_login_form_data } from "../../dataSchema/schemas.js";
 import { displayHandler, displaySwitch } from "../../functions/ConstFunctions";
@@ -21,8 +21,8 @@ export default function Login(props) {
     let _inputs = document.querySelectorAll(`.${error_selector}`);
     _inputs.forEach(
       (el) =>
-      (el.style.boxShadow =
-        "1.5px 1.5px 1px rgba(220,22,11,.6),-1.5px -1.5px 1px rgba(220,22,11,.6)")
+        (el.style.boxShadow =
+          "1.5px 1.5px 1px rgba(220,22,11,.6),-1.5px -1.5px 1px rgba(220,22,11,.6)")
     );
   }
 
@@ -104,7 +104,7 @@ export default function Login(props) {
           onClick={(e) => {
             e.preventDefault();
             formdata.login_email.length > 3 &&
-              formdata.login_password.length > 3
+            formdata.login_password.length > 3
               ? HandleSubmit(formdata)
               : inputErrorHighlight("login_err");
           }}
